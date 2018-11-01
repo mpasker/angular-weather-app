@@ -7,7 +7,7 @@ import { WeatherService } from './weather.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private temperature: number;
+  public temperature: number;
 
   constructor(private _weatherService: WeatherService) { }
 
