@@ -16,9 +16,9 @@ export class WeatherService {
 
   constructor(private _http: HttpClient) { }
 
-  public getWeather(): Observable<WeatherData> {
+  public getWeather(latitude: number, longitude: number): Observable<WeatherData> {
     return this._http.get(
-      'https://api.darksky.net/forecast/546a33937740ac4c54a19f8c242fe265/42.3601,-71.0589'
+      `https://api.darksky.net/forecast/546a33937740ac4c54a19f8c242fe265/${latitude},${longitude}`
     ) as Observable<WeatherData>;
   }
 }
