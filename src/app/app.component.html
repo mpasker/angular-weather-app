@@ -5,3 +5,6 @@
 <div>Temperature: {{temperature}}</div>
 <div>Wind Speed: {{windSpeed}}</div>
 <div>Summary: {{summary}}</div>
+
+<input type="text" [(ngModel)]="city" placeholder="Input city or zip code">
+<button (click)="searchLocation()">Search</button>
